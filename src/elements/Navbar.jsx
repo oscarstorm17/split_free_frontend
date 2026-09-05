@@ -60,7 +60,7 @@ const styles = {
   },
   logo: {
     margin: "0px",
-    padding: "5px",
+    padding: "6px",
     width: "justifyContent",
     backgroundColor: "white",
     textDecoration: "none",
