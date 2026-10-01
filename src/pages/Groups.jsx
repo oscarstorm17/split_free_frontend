@@ -44,7 +44,7 @@ const Groups = () => {
         {error && <p style={{ color: "orange" }}>{error}</p>}
         {groups.length === 0 ?
           (<p>No groups found</p>) :
-          (<ul>
+          (<ul style={{padding:"0px"}}>
             {groups.map((group) =>
             (
               <table style={styles.table} key={group.groupID}>
@@ -95,7 +95,7 @@ const styles = {
   row: {
     padding: "14px 18px",
     margin: "30px 5px",
-    backgroundColor: "#f9f9f9",
+    //backgroundColor: "#f9f9f9",
     borderRadius: "10px",
     //cursor: "pointer",
     transition: "all 0.2s ease",
@@ -108,6 +108,7 @@ const styles = {
     padding: "12px",
     borderRight: "1px solid #ddd",
     borderLeft: "1px solid #ddd",
+    color: "#lalala"
   },
 
   buttonCell: {
@@ -119,8 +120,9 @@ const styles = {
   },
 
   button: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#ddd",
     border: "1px solid #ddd",
+    color: "#lalala"
   },
  
 

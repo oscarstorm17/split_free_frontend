@@ -7,6 +7,7 @@ import { getExpensesSplit } from "../services/getExpenseSplitService";
 import ViewExpenseDetailPopup from "../elements/ViewExpenseDetailPopup";
 import ExpenseSettlementPopup from "../elements/ExpenseSettlementPopup";
 import { getExpenseSettlementPopup } from "../services/ExpenseSettlementPopupService";
+import { FaFileAlt } from "react-icons/fa";
 
 const ViewExpenses = () => {
   const navigate = useNavigate();
@@ -94,9 +95,9 @@ const ViewExpenses = () => {
                   <td style={styles.name}>{expense.amount}</td>
                   <td style={styles.name}>{expense.paidByUserName}</td>
                   <td style={styles.name}>{expense.splitBy}</td>
-                  <td style={styles.name}><button onClick={() => {
+                  <td style={styles.name}><button style={styles.button}  onClick={() => {
                     onClickViewDetails(expense)
-                  }}>View Details</button></td>
+                  }}><FaFileAlt/>View Details</button></td>
                 </tr>
 
 
@@ -112,12 +113,11 @@ const ViewExpenses = () => {
             expenseSplits={expenseSplit}
             onClose={() => setShowDetailsPopup(false)}
           >
-
           </ViewExpenseDetailPopup>
         )}
 
       </div>
-      <button style={{...styles.buttonCell, marginTop:"20px"}} 
+      <button style={{...styles.button, marginTop:"20px"}} 
         onClick={onClickExpenseSettlement}
       >Calculate shares</button>
       {showExpenseSettlementPopup && (
@@ -137,7 +137,8 @@ const ViewExpenses = () => {
 const styles = {
   table: {
     width: "100%",
-    borderCollapse: "collapse"
+    borderCollapse: "collapse",
+    borderRadius: "10px"
   },
 
   row: {

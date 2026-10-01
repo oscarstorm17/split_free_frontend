@@ -12,10 +12,11 @@ import ChooseParticipants from './pages/ChooseParticipants';
 import {ToastContainer} from "react-toastify";
 import ViewExpenses from './pages/ViewExpenses';
 import "react-toastify/ReactToastify.css";
+import bg from "../src/assets/background_image.jpg";
 
 function App() {
   return (
-  <>
+  <div>
   {/* <ToastCon5173tainer></ToastContainer> */}
   <BrowserRouter>
       <Routes>
@@ -36,7 +37,7 @@ function App() {
         autoClose={2000}
         theme="light"
       />
-  </>
+  </div>
     
   )
 }
