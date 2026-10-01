@@ -56,12 +56,12 @@ const Home = () => {
 
   const styles = {
     container: {
-      marginTop: "100px",
+      marginTop: "20px",
       textAlign: "center"
     },
   
     heading: {
-      marginBottom: "30px",
+      marginBottom: "20px",
       textAlign:"center",
       fontSize: "24px"
     },

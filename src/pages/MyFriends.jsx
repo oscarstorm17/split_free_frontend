@@ -37,15 +37,17 @@ const MyFriends = () => {
     return (
         <div style={styles.page}>
             <Navbar />
-
+            <div>
             <h2 style={styles.heading}>Your Friends</h2>
+            </div>
+            
 
             {error && <p style={styles.error}>{error}</p>}
 
             {friends.length === 0 ? (
                 <p style={styles.noFriends}>No Friends Found</p>
                 ) : (
-                <ul style={styles.list}>
+                <ul style={styles.list} >
                     {friends.map((friend) => (
                         <li key={friend.id} style={styles.row}>
                             <span style={styles.friendName}>{friend.user2}</span>
@@ -66,17 +68,22 @@ const MyFriends = () => {
 }
 const styles = {
     page: {
-        minHeight:"100vh",
-        //backgroundColor: "#f4f6f9",
         padding: "20px",
         fontFamily: "Arial, sans-serif",
         margin :"10px",
+        width: "250px",
+        display: "flex",
+        flexDirection: "column",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+
     },
 
     heading: {
         textAlign: "center",
         color: "#333",
-        marginBottom: "25px",
+        marginBottom: "15px",
+        justifyContent: "center",
+        
     },
 
     error: {
@@ -102,13 +109,14 @@ const styles = {
 
     row: {
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#fff",
         padding: "15px 20px",
         marginBottom: "12px",
         borderRadius: "8px",
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+        width: "170px",
     },
 
     friendName: {

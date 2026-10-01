@@ -59,13 +59,12 @@ const styles = {
     zIndex: 1000
   },
   logo: {
-    margin: "0px",
+    marginRight: "10px",
     padding: "6px",
     width: "justifyContent",
-    backgroundColor: "white",
     textDecoration: "none",
-    color: "black",
-    borderRadius: "5px",
+    color: "white",
+    border: "1px solid grey",
     
   },
   links: {
